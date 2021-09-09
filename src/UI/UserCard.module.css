@@ -1,0 +1,15 @@
+.user-card {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #5676db;
+    color: white;
+    transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    padding: 2%;
+    font-weight: bold;
+}
+.user-card:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,10 @@
+.user-list {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+    .user-list {
+        width: 60%;
+    }
+}

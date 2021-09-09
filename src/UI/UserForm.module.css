@@ -1,0 +1,53 @@
+.user-form {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+.user-form input:not(input[type='submit']) {
+    width: 100%;
+    border: none;
+    display: block;
+    outline: none;
+    margin: 20px 0px;
+    padding: 1% 2%;
+    border-bottom: 2px solid black;
+    transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+}
+.user-form input:not(input[type='submit']):hover, .user-form input:not(input[type='submit']):focus, .user-form input:not(input[type='submit']):active {
+    border-bottom-color: #5676db;
+}
+.user-form input[type='submit'] {
+    width: 100%;
+    margin: 40px 0px;
+    padding: 1% 2%;
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: #5676db;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+}
+.user-form input[type='submit']:hover {
+    background-color: black;
+}
+
+.invalid {
+    border-color: red !important;
+}
+
+@media(min-width: 768px) {
+    .user-form {
+        width: 60%;
+    }
+    .user-form input[type='submit'] {
+        width: auto;
+    }
+}
