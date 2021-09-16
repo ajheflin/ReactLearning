@@ -7,12 +7,7 @@ const CartItem = (props) => {
     const cartCtx = useContext(CartContext);
 
     const removeOneFromCart = () => {
-        cartCtx.removeOneFromCart({
-            name: props.name,
-            description: props.description,
-            price: props.price,
-            count: props.amount,
-        });
+        cartCtx.removeOneFromCart(props.name);
     };
     const addOneToCart = () => {
         cartCtx.addOneToCart(props.name);

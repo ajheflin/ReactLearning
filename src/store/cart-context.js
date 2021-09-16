@@ -39,6 +39,11 @@ export const CartContextProvider = (props) => {
             return previousCart;
         });
     };
+    const removeFromCart = (itemname) => {
+        updateCart(previousCart => {
+            return previousCart.filter(item => item.name !== itemname);
+        });
+    }
     const addOneToCart = (itemname) => {
         updateCartCount((previousCount) => {
             return previousCount + 1;
@@ -54,15 +59,26 @@ export const CartContextProvider = (props) => {
     };
     const removeOneFromCart = (itemname) => {
         updateCartCount((previousCount) => {
-            return previousCount - 1;
-        });
-        let cartIndex = cart.findIndex(cartItem => cartItem.name === itemname);
-        updateCart((previousCart) => {
-            previousCart[cartIndex].count = previousCart[cartIndex].count - 1;
-            return previousCart;
-        });
-        updateCartTotal((previousCartTotal) => {
-            return previousCartTotal + cart[cartIndex].price;
+            if(previousCount - 1 > 0) {
+                let cartIndex = cart.findIndex(cartItem => cartItem.name === itemname);
+                updateCart((previousCart) => {
+                    previousCart[cartIndex].count = previousCart[cartIndex].count - 1;
+                    return previousCart;
+                });
+                updateCartTotal((previousCartTotal) => {
+                    return previousCartTotal - cart[cartIndex].price;
+                });
+                return previousCount - 1;
+            } else if(previousCount - 1 === 0) {
+                let cartIndex = cart.findIndex(cartItem => cartItem.name === itemname);
+                updateCartTotal((previousCartTotal) => {
+                    return previousCartTotal - cart[cartIndex].price;
+                });
+                updateCartCount(previousCount => {
+                    return previousCount - cart[cartIndex].count;
+                });
+                removeFromCart(itemname);
+            }
         });
     };
 
