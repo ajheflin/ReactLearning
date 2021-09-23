@@ -1,0 +1,23 @@
+{
+  "name": "react-complete-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "redux.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajheflin/ReactLearning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajheflin/ReactLearning/issues"
+  },
+  "homepage": "https://github.com/ajheflin/ReactLearning#readme",
+  "dependencies": {
+    "redux": "^4.1.1"
+  }
+}
