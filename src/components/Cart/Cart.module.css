@@ -1,0 +1,98 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #8a2b06;
+}
+
+.actions .button {
+  background-color: #8a2b06;
+  color: white;
+}
+.form-control {
+  display: block;
+  width: 100%;
+}
+.form-control input {
+}
+.invalid {
+  color: red;
+}
+.input {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-bottom: 2px solid black;
+  transition: .3s all ease-in-out;
+  -moz-transition: .3s all ease-in-out;
+  -webkit-transition: .3s all ease-in-out;
+}
+.input:hover {
+  border-bottom-color: #92320c;
+}
+.submit {
+  margin: 10px auto;
+  display: block;
+  width: auto;
+  padding: 1% 2%;
+  border-radius: 5px;
+  background-color: #ad5502;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  transition: .3s all ease-in-out;
+  -moz-transition: .3s all ease-in-out;
+  -webkit-transition: .3s all ease-in-out;
+}
+.submit:hover {
+  background-color: #641e03;
+  cursor: pointer;
+}
+.submit:disabled {
+  background-color: #ccc;
+  color: black;
+  cursor: not-allowed;
+}
